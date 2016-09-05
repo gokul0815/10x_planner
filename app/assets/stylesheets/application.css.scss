@@ -26,17 +26,10 @@ $yellow: #ffc952;
 // Universal
 html, body {
   font-family: 'Open Sans', sans-serif;
-  // width: 100%;
-  // height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-body {
-  background: url(planner.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 // Navigation bar
 #logo {
   a {
@@ -64,14 +57,24 @@ ul.nav.navbar-nav {
 
 // Body of home page
 .header {
-  color: $white;
-  margin-top: 20rem;
+  width: inherit;
+  height: inherit;
+  background: url(planner.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+  padding-top: 20rem;
   text-align: center;
   h1 {
+    color: $white;
     font-weight: 700;
     font-size: 7em;
   }
   p {
+    color: $white;
     font-size: 2.5rem;
   }
   button {
