@@ -1,2 +1,6 @@
-- @posts.each do |post|
-  = link_to post.day, post_path(post)
+.container
+  .row
+    .col-md-6.post_link
+      - @posts.each do |post|
+        %h3
+          = link_to "#{post.day}, #{post.created_at.strftime("%d %b. %Y")}", post_path(post)

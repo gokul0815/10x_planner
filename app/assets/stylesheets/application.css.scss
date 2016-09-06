@@ -13,9 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
  @import "normalize";
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
 
 // Mixins and variables
 $text-color: #34314c; // dark-blueish
@@ -86,3 +88,18 @@ ul.nav.navbar-nav {
     }
   }
 }
+
+//////// POSTS ///////////
+
+// Index.html.haml
+.post_link {
+  a {
+    color: $text-color;
+    &:hover {
+      text-decoration: none;
+      color: $link-color;
+    }
+  }
+}
+
+// Devise

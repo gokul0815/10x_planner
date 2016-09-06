@@ -1,6 +1,25 @@
-%p= @post.day
-%p= @post.goals_first
-%p= @post.quote_of_the_day
-%p= @post.targets
-%p= @post.successes
-%p= @post.goals_second
+.container
+  .show_post
+    %h3 Day:
+    %p= @post.day
+
+    %h3 Write goals:
+    %p= @post.goals_first
+
+    %h3 Quote of the day:
+    %p= @post.quote_of_the_day
+
+    %h3 Targets:
+    %p= @post.targets
+
+    %h3 Successes:
+    %p= @post.successes
+
+    %h3 Write goals:
+    %p= @post.goals_second
+
+    - if @post.user_id == current_user.id
+      = link_to "Edit", edit_post_path(@post)
+      = link_to "Back", posts_path
+    - else
+      = link_to "Back", posts_path

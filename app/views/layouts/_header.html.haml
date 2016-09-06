@@ -1,6 +1,9 @@
 %nav.navbar.navbar-default
   .container
-    .navbar-brand#logo= link_to "my10xplanner.com", root_path
+    - if user_signed_in?
+      .navbar-brand#logo= link_to "my10xplanner.com", posts_path
+    - else
+      .navbar-brand#logo= link_to "my10xplanner.com", root_path
 
     %ul.nav.navbar-nav.navbar-right
       - if user_signed_in?

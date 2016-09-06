@@ -1,4 +1,6 @@
-%h1 Edit post
-= render "form"
-= link_to "Cancel", posts_path
-= link_to "Delete", "#"
+.container
+  %h1 Edit post
+  = render "form"
+  - if user_signed_in? && @post.user_id == current_user.id
+    = link_to "Cancel", @post
+    = link_to "Delete", @post, method: :delete, data: { confirm: "Are you sure?" }
