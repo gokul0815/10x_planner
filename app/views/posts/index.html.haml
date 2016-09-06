@@ -1,6 +1,8 @@
 .container
-  .row
-    .col-md-6.post_link
-      - @posts.each do |post|
-        %h3
-          = link_to "#{post.day}, #{post.created_at.strftime("%d %b. %Y")}", post_path(post)
+  .post_link
+    .message
+      %h1 Welcome, Simon!
+      %h4 A dream doesn't become reality through magic; it takes sweat, determination and hard work.
+    - @posts.each do |post|
+      %h3
+        = link_to "#{post.day}, #{post.created_at.strftime("%d %b. %Y")}", post_path(post)

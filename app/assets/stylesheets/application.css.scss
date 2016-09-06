@@ -32,6 +32,34 @@ html, body {
   height: 100%;
 }
 
+body {
+  background: rgba(247,222,158,1);
+  background: -moz-linear-gradient(45deg, rgba(247,222,158,1) 0%, rgba(240,207,122,1) 13%, rgba(240,188,56,1) 56%, rgba(250,193,40,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(247,222,158,1)), color-stop(13%, rgba(240,207,122,1)), color-stop(56%, rgba(240,188,56,1)), color-stop(100%, rgba(250,193,40,1)));
+  background: -webkit-linear-gradient(45deg, rgba(247,222,158,1) 0%, rgba(240,207,122,1) 13%, rgba(240,188,56,1) 56%, rgba(250,193,40,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(247,222,158,1) 0%, rgba(240,207,122,1) 13%, rgba(240,188,56,1) 56%, rgba(250,193,40,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(247,222,158,1) 0%, rgba(240,207,122,1) 13%, rgba(240,188,56,1) 56%, rgba(250,193,40,1) 100%);
+  background: linear-gradient(45deg, rgba(247,222,158,1) 0%, rgba(240,207,122,1) 13%, rgba(240,188,56,1) 56%, rgba(250,193,40,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7de9e', endColorstr='#fac128', GradientType=1 );
+}
+// Typography
+
+h1, h2, h3, h4, h5, h6, p {
+  color: $text-color;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 62px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 38px;
+}
 // Navigation bar
 #logo {
   a {
@@ -42,6 +70,9 @@ html, body {
       text-decoration: none;
     }
   }
+}
+.navbar {
+  margin-bottom: 0;
 }
 
 ul.nav.navbar-nav {
@@ -93,12 +124,19 @@ ul.nav.navbar-nav {
 
 // Index.html.haml
 .post_link {
+  text-align: center;
+  h3 {
+    font-weight: 300;
+  }
   a {
     color: $text-color;
     &:hover {
       text-decoration: none;
-      color: $link-color;
+      color: $white;
     }
+  }
+  .message {
+    padding-bottom: 35px;
   }
 }
 
