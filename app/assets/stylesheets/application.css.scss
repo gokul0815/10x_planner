@@ -33,14 +33,7 @@ html, body {
 }
 
 body {
-  background: rgba(247,222,158,1);
-  background: -moz-linear-gradient(45deg, rgba(247,222,158,1) 0%, rgba(240,207,122,1) 13%, rgba(240,188,56,1) 56%, rgba(250,193,40,1) 100%);
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(247,222,158,1)), color-stop(13%, rgba(240,207,122,1)), color-stop(56%, rgba(240,188,56,1)), color-stop(100%, rgba(250,193,40,1)));
-  background: -webkit-linear-gradient(45deg, rgba(247,222,158,1) 0%, rgba(240,207,122,1) 13%, rgba(240,188,56,1) 56%, rgba(250,193,40,1) 100%);
-  background: -o-linear-gradient(45deg, rgba(247,222,158,1) 0%, rgba(240,207,122,1) 13%, rgba(240,188,56,1) 56%, rgba(250,193,40,1) 100%);
-  background: -ms-linear-gradient(45deg, rgba(247,222,158,1) 0%, rgba(240,207,122,1) 13%, rgba(240,188,56,1) 56%, rgba(250,193,40,1) 100%);
-  background: linear-gradient(45deg, rgba(247,222,158,1) 0%, rgba(240,207,122,1) 13%, rgba(240,188,56,1) 56%, rgba(250,193,40,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7de9e', endColorstr='#fac128', GradientType=1 );
+ background-color: #F1F1F1;
 }
 // Typography
 
@@ -123,21 +116,18 @@ ul.nav.navbar-nav {
 //////// POSTS ///////////
 
 // Index.html.haml
-.post_link {
+.posts {
   text-align: center;
   h3 {
     font-weight: 300;
   }
   a {
     color: $text-color;
-    &:hover {
-      text-decoration: none;
-      color: $white;
-    }
-  }
-  .message {
-    padding-bottom: 35px;
   }
 }
 
-// Devise
+.message {
+  margin-top: 35px;
+  text-align: center;
+  padding-bottom: 35px;
+}
