@@ -1,7 +1,9 @@
 .container
   .post_link
     .message
-      %h1 Welcome, Simon!
+      %h1
+        Welcome,
+        = current_user.first_name
       %h4 A dream doesn't become reality through magic; it takes sweat, determination and hard work.
     - @posts.each do |post|
       %h3
