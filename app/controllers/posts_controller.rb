@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :owned_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = current_user.posts.order("created_at DESC")
+    @posts = current_user.posts.order("created_at DESC").paginate(page: params[:page])
   end
 
   def show

@@ -8,3 +8,9 @@
     - @posts.each do |post|
       %h3
         = link_to "#{post.day}, #{post.created_at.strftime("%d %b. %Y")}", post_path(post)
+
+    = will_paginate @posts
+    %br
+    %small
+      Total post count:
+      = total_posts
